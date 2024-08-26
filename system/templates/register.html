@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+{% load static %}
+{% block stylesheet %}
+
+<link rel="stylesheet" href="{% static "css/register.css" %}">
+{% endblock  %}
+
+{% block content %}
+
+<body>
+
+
+    <div class=" container bg-light shadow-md p-5  form-layout ">
+
+        <h3> Create you accout </h3>
+
+        <h5> Start managing clients today!</h5>
+
+        <hr>
+        <br>
+
+
+        <form method="POST" autocomplete="off" action="">
+            {% csrf_token %}
+
+            {{form.username}}
+            <br>
+            {{form.password1}}
+            <br>
+            {{form.password2}}
+
+
+            <div class="d-flex justify-content-center my-3">
+                 <button type="submit" class="btn btn-primary w-30 btn-block p-2" > Create account &nbsp; <i class="fa-solid fa-user-plus"></i> </button>
+            </div>
+        </form>
+
+
+        <div class='text-center'>
+
+            <p>Alredy have an account? &nbsp; <a href="{% url "login" %}">Login</a></p>
+
+        </div>
+
+    </div>
+
+    <br>
+
+</body>
+
+{% endblock  %}

@@ -1,0 +1,54 @@
+{% load static %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/cards.css" %}">
+{% endblock  %}
+
+
+<div class="wrapper">
+
+    <div class="card air-bg">
+        <div class="card-icon ">
+            <i class="fa-solid fa-wind large-icon"></i>
+            {% comment %} <img src="wind-icon.png" alt="Air Quality Icon"> {% endcomment %}
+        </div>
+        <div class="card-content">
+            <div class="card-value">{{Air_value}}<span>ppm</span></div>
+        </div>
+        <div class="card-label">Air Quality</div>
+    </div>
+
+    <div class="card noise-bg">
+        <div class="card-icon">
+            <i class="fa-solid fa-volume-high large-icon"></i>
+            {% comment %} <img src="wind-icon.png" alt="Air Quality Icon"> {% endcomment %}
+        </div>
+        <div class="card-content">
+            <div class="card-value">90 <span>dB</span></div>
+            <div class="card-label">Noise level</div>
+        </div>
+    </div>
+
+    <div class="card temp-bg">
+        <div class="card-icon">
+            <i class="fa-solid fa-temperature-three-quarters large-icon"></i>
+            {% comment %} <img src="wind-icon.png" alt="Air Quality Icon"> {% endcomment %}
+        </div>
+        <div class="card-content">
+            <div class="card-value">{{temp_value}}<span>°C</span></div>
+            <div class="card-label">Temprature</div>
+        </div>
+    </div>
+
+    <div class="card hum-bg">
+        <div class="card-icon">
+            <i class="fa-solid fa-droplet large-icon"></i>
+            {% comment %} <img src="wind-icon.png" alt="Air Quality Icon"> {% endcomment %}
+        </div>
+        <div class="card-content">
+            <div class="card-value">{{hum_value}}<span>%</span></div>
+            <div class="card-label">Humidity</div>
+        </div>
+    </div>
+
+</div>
